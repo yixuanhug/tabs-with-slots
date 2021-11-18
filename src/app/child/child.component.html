@@ -1,0 +1,9 @@
+<p>child!</p>
+<div #secondRef>
+  <ng-content select="[second-outlet]"> </ng-content>
+</div>
+<ng-container *ngIf="!secondRef.children.length">
+  <div>Default second from child</div>
+</ng-container>
+<br />
+<ng-content select="[first-outlet]"> </ng-content>
